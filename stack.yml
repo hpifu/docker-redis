@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   redis:
-    image: hatlonely/redis:1.0.0
+    image: hatlonely/redis:1.1.0
     hostname: redis
     deploy:
       replicas: 1

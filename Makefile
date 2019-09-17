@@ -1,4 +1,4 @@
-version=1.0.0
+version=$(shell git describe --tags)
 repository=redis
 user=hatlonely
 
@@ -17,7 +17,7 @@ deploy:
 	docker stack deploy -c stack.yml ${repository}
 
 remove:
-	docker stack rm ${repository} 
+	docker stack rm ${repository}
 
 build:
 	docker build --tag=${user}/${repository}:${version} .
@@ -25,4 +25,3 @@ build:
 
 push:
 	docker push ${user}/${repository}:${version}
-
