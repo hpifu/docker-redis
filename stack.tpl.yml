@@ -3,6 +3,7 @@ services:
   ${repository}:
     image: hatlonely/${repository}:${version}
     hostname: ${repository}
+    user: root
     deploy:
       replicas: 1
       resources:
