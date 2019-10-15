@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   ${repository}:
-    image: redis:5.0.5-alpine
+    image: redis:5.0.6
     hostname: ${repository}
     user: root
     deploy:
