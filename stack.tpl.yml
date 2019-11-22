@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   ${repository}:
-    image: hatlonely/${repository}:${version}
+    image: redis:5.0.6
     hostname: ${repository}
     user: root
     deploy:
@@ -13,8 +13,8 @@ services:
         condition: on-failure
     ports:
       - "6379:6379"
-    # volumes:
-    #   - "/var/docker/${repository}/data:/data"
+    volumes:
+      - "/var/docker/${repository}/data:/data"
     networks:
       - ${repository}net
 networks:
