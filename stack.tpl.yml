@@ -16,7 +16,8 @@ services:
     # volumes:
     #   - "/var/docker/${repository}/data:/data"
     networks:
-      - ${repository}net
+      - online
 networks:
-  ${repository}net:
-    name: ${repository}net
+  online:
+    external: true
+    name: online
