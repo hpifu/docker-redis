@@ -12,5 +12,4 @@ RUN wget http://download.redis.io/releases/redis-5.0.7.tar.gz && \
     make install
 
 COPY redis.conf /usr/local/etc/redis/redis.conf
-USER root
 CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]

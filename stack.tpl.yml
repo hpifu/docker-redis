@@ -3,7 +3,6 @@ services:
   ${repository}:
     image: redis:5.0.7
     hostname: ${repository}
-    user: root
     deploy:
       replicas: 1
       resources:
